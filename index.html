@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sara Almugbel's personal portfolio">
+  <title>Sara Almugbel | Portfolio</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <h2>Sara Almugbel</h2>
+
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button id="theme-toggle" type="button" aria-pressed="false">
+        Dark Mode
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- About Me -->
+    <section id="about">
+      <h1>Hello, I'm Sara Almugbel</h1>
+      <h2>Software Engineering Student at KFUPM</h2>
+
+      <p>
+        Welcome to my personal portfolio!
+        I am passionate about software development,
+        web technologies, and creating useful applications.
+        I enjoy learning new programming languages and
+        developing my technical skills.
+      </p>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>My Project Ideas & Future Innovations</h2>
+
+      <p>
+        Explore my project ideas using the category buttons below.
+      </p>
+
+      <!-- Interactive Project Filters -->
+      <div class="filters" role="group" aria-label="Project filters">
+        <button class="filter active" data-filter="all"
+                type="button" aria-pressed="true">
+          All
+        </button>
+
+        <button class="filter" data-filter="productivity"
+                type="button" aria-pressed="false">
+          Productivity
+        </button>
+
+        <button class="filter" data-filter="campus"
+                type="button" aria-pressed="false">
+          Campus
+        </button>
+      </div>
+
+      <div class="projects-container">
+
+        <!-- Project 1 -->
+        <article class="project-card" data-category="productivity">
+          <h3>Smart Study Planner</h3>
+
+          <p>
+            A web application idea designed to help students
+            organize their study schedules, manage assignments,
+            and track academic progress.
+          </p>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card" data-category="campus">
+          <h3>Campus Connect</h3>
+
+          <p>
+            A platform idea that connects university students
+            with campus events, clubs, and activities.
+          </p>
+        </article>
+
+      </div>
+
+      <p id="projects-status" role="status" aria-live="polite"></p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+
+      <p>
+        Fill out the form below.
+        This demonstration validates your information locally
+        but does not send messages.
+      </p>
+
+      <form id="contact-form" novalidate>
+
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+        >
+
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        >
+
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Write your message"
+          required
+        ></textarea>
+
+        <button type="submit">Check Message</button>
+
+        <p id="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Sara Almugbel. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

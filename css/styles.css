@@ -1,0 +1,290 @@
+
+/* ==================================
+   Sara Almugbel - Portfolio
+   Assignment 2: Interactive Features
+   ================================== */
+
+/* Theme colors */
+:root {
+  --background: #f7f4f2;
+  --surface: #ffffff;
+  --text: #222222;
+  --muted: #555555;
+  --accent: #7b2744;
+  --border: #dddddd;
+}
+
+/* Dark mode colors */
+body.dark {
+  --background: #17151a;
+  --surface: #28232b;
+  --text: #f6f0f4;
+  --muted: #d1c3cc;
+  --accent: #efa6c2;
+  --border: #554854;
+}
+
+/* General styling */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+p {
+  color: var(--muted);
+}
+
+/* Navigation */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+nav {
+  max-width: 1100px;
+  margin: auto;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+nav h2 {
+  margin: 0;
+  color: var(--accent);
+  font-size: 1.2rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* Sections */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+#about {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  color: var(--accent);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin-bottom: 5px;
+}
+
+#about h2 {
+  font-size: 1.7rem;
+  margin-top: 0;
+}
+
+#about p {
+  max-width: 650px;
+}
+
+#projects h2,
+#contact h2 {
+  color: var(--accent);
+  font-size: 2rem;
+}
+
+/* Buttons */
+button {
+  background: #7b2744;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+  background: #5f1d34;
+  transform: translateY(-2px);
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Project filtering */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0 25px;
+}
+
+.filter.active {
+  background: var(--accent);
+  color: var(--background);
+  border-color: var(--accent);
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 20px #00000012;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px #00000020;
+}
+
+.project-card[hidden] {
+  display: none;
+}
+
+.project-card h3 {
+  color: var(--accent);
+  margin-top: 0;
+}
+
+#projects-status {
+  min-height: 1.5em;
+}
+
+/* Contact form */
+form {
+  max-width: 650px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px #00000012;
+}
+
+label {
+  font-weight: bold;
+  margin: 12px 0 5px;
+}
+
+input,
+textarea {
+  background: var(--background);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  font: inherit;
+}
+
+form button {
+  margin-top: 20px;
+}
+
+#form-message {
+  min-height: 1.5em;
+  font-weight: bold;
+}
+
+#form-message.error {
+  color: #cf3853;
+}
+
+#form-message.success {
+  color: #25875a;
+}
+
+/* Footer */
+footer {
+  background: #222222;
+  padding: 25px;
+  text-align: center;
+}
+
+footer p {
+  color: white;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 700px) {
+  nav {
+    flex-wrap: wrap;
+  }
+
+  nav ul {
+    order: 3;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  section {
+    padding: 60px 20px;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
