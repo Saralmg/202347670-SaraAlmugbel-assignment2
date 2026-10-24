@@ -181,3 +181,26 @@ interactive website.
 The assignment provided practical experience
 with JavaScript event handling, DOM manipulation,
 localStorage, form validation, and user feedback.
+
+
+## 9. AI Usage Log
+
+The following log records AI assistance used during the development and documentation of Assignment 2. Related activities are grouped below for review; the final log will be expanded as needed to include one entry per AI conversation or AI-generated artifact.
+
+| Date | AI Tool | Purpose | Files Affected | Human Review and Modifications |
+|---|---|---|---|---|
+| October 2026 — verify exact date | ChatGPT (OpenAI) | Understand Assignment 2 requirements and plan interactive portfolio features | `index.html`, `css/styles.css`, `js/script.js` | Selected the features to include and reviewed the suggested implementation. |
+| October 2026 — verify exact date | ChatGPT (OpenAI) | Generate and explain HTML, CSS, and JavaScript for theme switching, project filtering, and form validation | `index.html`, `css/styles.css`, `js/script.js` | Integrated the code in VS Code, tested the interactive features, and revised the Projects heading. |
+| October 2026 — verify exact date | ChatGPT (OpenAI) | Troubleshoot nonresponsive interactive buttons and organize project files | `index.html`, `js/script.js`, project folders | Added the JavaScript functionality, checked the browser behavior, and corrected file locations. |
+| October 2026 — verify exact date | ChatGPT (OpenAI) | Prepare the README and assignment documentation | `README.md`, `docs/ai-usage-report.md`, `docs/technical-documentation.md` | Reviewed the documentation and corrected duplicate file placement. |
+| October 24, 2026 | ChatGPT (OpenAI) | Review the AI usage report against the instructor's updated requirements | `docs/ai-usage-report.md` | Reviewed the existing report and prepared an additional usage log. |
+
+
+## 10. AI Usage Declaration
+
+I declare that this report and the attached evidence document all of my AI use in this assignment, with complete and unedited conversations, and that I understand and can explain all the code I submitted. I understand that undeclared AI use or a false declaration will be treated as plagiarism according to KFUPM regulations.
+
+**Name:** Sara Almugbel  
+**Student ID:** 202347670  
+**Date:** October 24, 2026  
+**Signature:** Sara Almugbel
